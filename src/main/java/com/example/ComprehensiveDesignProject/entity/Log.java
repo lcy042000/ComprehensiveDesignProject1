@@ -1,28 +1,29 @@
 package com.example.ComprehensiveDesignProject.entity;
 
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
 @NoArgsConstructor
+@Setter
+@Getter
 public class Log {
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String dialect;
-    @Column
+    @Column(nullable = false)
     private String region;
-    @Column
+    @Column(nullable = false)
     private String result;
-    @Column
+    @Column(nullable = false)
     private LocalDateTime startTime;
-    @Column
+    @Column(nullable = false)
     private LocalDateTime closeTime;
 
     public Log(Long id, String dialect, String region, String result, LocalDateTime startTime, LocalDateTime closeTime) {
