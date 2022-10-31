@@ -1,14 +1,12 @@
 package com.example.ComprehensiveDesignProject.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
 @Getter
+@ToString
 public class TranslatedDTO {
     private String standard_form;
     private String region;

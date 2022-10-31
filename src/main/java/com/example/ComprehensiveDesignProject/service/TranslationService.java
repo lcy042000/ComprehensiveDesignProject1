@@ -50,6 +50,8 @@ public class TranslationService {
                     translatedDTO.setRegion(data.getRegion());
                 });
 
+        log.info(translatedDTO.toString());
+
         return translatedDTO;
     }
 }
